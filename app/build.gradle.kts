@@ -1,17 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    // Kotlin itself is built into AGP 9; only the Compose compiler plugin is applied.
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.example.kotlincalculator"
-    compileSdk = 34
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.example.kotlincalculator"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
     }
@@ -31,9 +31,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+    // With built-in Kotlin, the Kotlin jvmTarget follows targetCompatibility,
+    // so no kotlinOptions / kotlin.compilerOptions block is needed.
 
     buildFeatures {
         compose = true
@@ -53,8 +52,9 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     testImplementation(libs.junit)
-    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
-    implementation("com.google.firebase:firebase-messaging")
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.messaging)
 }
 
 // Native Notify: Firebase starts once google-services.json is in this folder, so the project still builds before you add it.

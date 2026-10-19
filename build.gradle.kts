@@ -2,7 +2,7 @@
 // every module can use the same versions from gradle/libs.versions.toml.
 plugins {
     alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
+    // AGP 9 has built-in Kotlin, so there is no kotlin-android plugin here.
     alias(libs.plugins.kotlin.compose) apply false
-    id("com.google.gms.google-services") version "4.4.4" apply false
+    alias(libs.plugins.google.services) apply false
 }
