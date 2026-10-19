@@ -53,4 +53,11 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     testImplementation(libs.junit)
+    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
+    implementation("com.google.firebase:firebase-messaging")
+}
+
+// Native Notify: Firebase starts once google-services.json is in this folder, so the project still builds before you add it.
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
 }
