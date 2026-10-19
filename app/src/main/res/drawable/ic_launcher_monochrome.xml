@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single-color mask used for Android 13+ themed icons. Only the alpha
+     channel matters; the system tints the white parts. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Calculator outline -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M36,28 L72,28 A10,10 0 0 1 82,38 L82,70 A10,10 0 0 1 72,80 L36,80 A10,10 0 0 1 26,70 L26,38 A10,10 0 0 1 36,28 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3" />
+
+    <!-- Screen -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,37 L73,37 L73,48 L35,48 Z" />
+
+    <!-- Keypad -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,55 h7 v7 h-7 z M50.5,55 h7 v7 h-7 z M65,55 h7 v7 h-7 z M36,66 h7 v7 h-7 z M50.5,66 h7 v7 h-7 z M65,66 h7 v7 h-7 z" />
+</vector>
