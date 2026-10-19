@@ -10,6 +10,17 @@ iOS app: the same four-column keypad, the same nine-digit limit, and the same
   <img src="docs/screenshot-dark.png" width="300" alt="Kotlin Calculator in dark mode, showing 7 × 8 = 56" />
 </p>
 
+## Package name
+
+- **Application ID:** `com.example.kotlincalculator`
+- **Kotlin namespace:** `com.example.kotlincalculator`
+
+Both are declared in `app/build.gradle.kts`, and the `package` declarations and
+source folders match them. The `com.example` prefix mirrors the sibling Swift
+tutorial app (`com.example.SwiftCalculator`). If you publish on Google Play,
+replace it with your own reverse-domain ID in `app/build.gradle.kts`, the
+`package` lines, and the source folder names.
+
 ## Features
 
 - **Four operations** — add, subtract, multiply, divide, with chained input
